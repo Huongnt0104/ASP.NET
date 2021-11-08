@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detail</h2>
+<h4>Thông tin đã chỉnh sửa</h4>
+
+<ul>
+    @*<li>ID: @ViewBag.Id</li>
+        <li>Name: @ViewData["Name"]</li>
+        <li>Marks: @ViewBag.Marks</li>*@
+    <li>ID: @Model.Id</li>
+    <li>Name: @Model.Name</li>
+    <li>Marks: @Model.Marks</li>
+</ul>
+<a href="/NhapDiem/Xuly?Id=SV01&Name=Tuấn&Marks=9">
+    Tuấn
+</a><br/>
+<a href="/NhapDiem/Xuly/SV02/?Name=Hải&Marks=8">Hải</a>
+
+<form action="/NhapDiem/Xuly" method="post">
+    <div> Mã SV:</div><input name="Id" />
+    <div> Họ tên:</div><input name="Name" />
+    <div> Điểm:</div><input name="Marks" />
+    <hr />
+    <input type="submit" value="Nhập" />
+</form>

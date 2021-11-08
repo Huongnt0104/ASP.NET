@@ -1,0 +1,43 @@
+﻿@model Bai2.Models.Sinhvien
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Regis</title>
+</head>
+<body>
+    <div>
+        <h4>Sinhvien</h4>
+        <hr />
+        <table border="1" cellpadding="5" style="border-collapse: collapse">
+            <tr style="height: 50px">
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Email</td>
+                <td>Password</td>
+                <td>City</td>
+                <td>Gender</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayFor(model => model.firstname)</td>
+                <td>@Html.DisplayFor(model => model.lastname)</td>
+                <td>@Html.DisplayFor(model => model.email)</td>
+                <td>@Html.DisplayFor(model => model.password)</td>
+                <td>@Html.DisplayFor(model => model.addr)</td>
+                <td>@Html.DisplayFor(model => model.gender)</td>
+            </tr>
+        </table>
+        
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

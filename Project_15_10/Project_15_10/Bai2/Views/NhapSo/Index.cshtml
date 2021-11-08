@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<form action="/NhapSo/XuLy" method="post">
+    <div style="margin-bottom:10px;">
+        Nhập vào số a:
+        <input type="text" id="nhapsoa" name="sa" />
+    </div>
+    <div style="margin-bottom:10px;">
+        Nhập vào số b:
+        <input type="text" id="nhapsob" name="sb" />
+    </div>
+
+    <div>
+        <input type="radio" id="cong" name="pt" value="cong" /><label style="font-weight: 400; margin-right:10px;" for="cong">Cộng</label>
+        <input type="radio" id="tru" name="pt" value="tru" /><label style="font-weight: 400; margin-right:10px;" for="tru">Trừ</label>
+        <input type="radio" id="nhan" name="pt" value="nhan" /><label style="font-weight: 400; margin-right:10px;" for="nhan">Nhân</label>
+        <input type="radio" id="chia" name="pt" value="chia" /><label style="font-weight: 400; margin-right:10px;" for="chia">Chia</label>
+    </div>
+
+    <input type="submit" value="Caculate" />
+</form>

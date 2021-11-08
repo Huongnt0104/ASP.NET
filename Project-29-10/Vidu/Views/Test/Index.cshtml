@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+@{ 
+    var num1 = Model.TestId;
+    var num2 = Model.TestId2;
+
+    var gender = "";
+    var addr = "";
+    if (IsPost)
+    {
+        gender = Request["ho"];
+        addr = Request["select"];
+    }
+
+
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <form method="post" action="">
+            <input type="text" name="TestId" />
+            <input type="text" name="TestId2" />
+            <input type="checkbox" name="ho" value="Nam" />
+            <input type="checkbox" name="ho" value="Nu" />
+            <select name="select">
+                <option value="Hà Nội">Hà Nội</option>
+                <option value="Bắc Giang">Bắc Giang</option>
+                <option value="Hải Phòng">Hải phòng</option>
+            </select>
+            <input type="submit" />
+            <dv>@gender</dv>
+            <div>@addr</div>
+        </form>
+
+    </div>
+</body>
+</html>
